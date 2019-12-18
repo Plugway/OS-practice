@@ -1,0 +1,3 @@
+Доступные аргументы:
+animation - запуск анимации из директории animation
+<any_name> - вывод изображения ./images/<any_name>.txt

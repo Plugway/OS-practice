@@ -1,0 +1,19 @@
+if [ $(float <<< "$delayPerFrame") -eq "0" ]; then
+	if [ $(float <<< "$deltaAngle % 1 == 0") -eq "1" ] && [ $(float <<< "$totalTime % 1 == 0") -eq "1" ]; then
+	echo -en "\e[38;05;11;1mWARNING: 
+\e[0mThe delay per frame ended up being 0.
+Resulting gif cycle may take longer than $totalTime centiseconds.
+
+Do you wish to continue with the original parameters? (Y/N) "
+	read -r userInput
+	if [ "${userInput,,}" == "y" ]; then
+		:
+	elif [ "${userInput,,}" == "n" ]; then
+		echo Stopping.
+		exit
+	else
+		echo -e "\e[38;05;9;1mERROR(Code 2):\e[0m user input not recognized, stopping."
+		exit 1
+	fi
+fi
+fi
