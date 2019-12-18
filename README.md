@@ -1,8 +1,9 @@
-#Практика по осям
+# Практика по осям
 
 ![](https://github.com/Plugway/OS-practice/blob/master/mmfiles/logo.jpg)
 
-###Bash
+
+### Bash
 
 - Locator.sh
 - Imagemagick.sh(1 вариант)
